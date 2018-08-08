@@ -19,14 +19,14 @@
 
 */
 
-// $Revision: 3515 $ $Date:: 2016-03-01 #$ $Author: serge $
+// $Revision: 9626 $ $Date:: 2018-08-08 #$ $Author: serge $
 
 #include <string>
 #include <cstdint>
 
-namespace wav_resample
+namespace wav_tools
 {
 
 bool resample( const std::string & infile, const std::string & outfile, std::string & error, uint32_t rate, uint32_t bps = 16 );
 
-} // namespace wav_resample
+} // namespace wav_tools

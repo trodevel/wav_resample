@@ -6,7 +6,7 @@ WAV resampler using SoX
 ``` c++
     std::string error;
 
-    auto b = wav_resample::resample( input_file, output_file, error, sampling_rate );
+    auto b = wav_tools::resample( input_file, output_file, error, sampling_rate );
 
     if( b )
     {

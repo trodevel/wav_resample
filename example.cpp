@@ -19,9 +19,10 @@
 
 */
 
-// $Revision: 3517 $ $Date:: 2016-03-01 #$ $Author: serge $
+// $Revision: 9632 $ $Date:: 2018-08-08 #$ $Author: serge $
 
-#include "wav_resample.h"   // resample
+#include "wav_resample.h"       // resample
+#include "get_wav_duration.h"   // get_wav_duration()
 
 #include <iostream>
 
@@ -38,11 +39,13 @@ int main( int argc, char* argv[] )
 
     std::string error;
 
-    auto b = wav_resample::resample( argv[1], argv[2], error, 8000 );
+    auto b = wav_tools::resample( argv[1], argv[2], error, 8000 );
 
     if( b )
     {
-        std::cout << "OK\n";
+        auto duration = wav_tools::get_wav_duration( argv[1] );
+
+        std::cout << "OK (" << duration << " sec)\n";
     }
     else
     {
