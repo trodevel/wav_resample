@@ -1,7 +1,7 @@
 WAV resampler using SoX
 =======================
 
-###Example###
+### Example ###
 
 ``` c++
     std::string error;
@@ -16,4 +16,10 @@ WAV resampler using SoX
     {
         std::cout << "ERROR: " << error << "\n";
     }
+```
+
+### Required libraries ###
+``` bash
+    sudo apt-get install libsndfile-dev
+    sudo apt-get install libsox-dev
 ```
